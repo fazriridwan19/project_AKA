@@ -9,7 +9,7 @@ import (
 )
 
 func ConnectDatabase() *gorm.DB {
-	dsn := "root:root@tcp(192.168.0.102:3306)/project_aka"
+	dsn := "root:root@tcp(localhost:3306)/project_aka?parseTime=true"
 	log.Println("Connection to ", dsn)
 
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})

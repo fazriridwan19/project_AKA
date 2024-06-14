@@ -10,5 +10,5 @@ import (
 func main() {
 	db := config.ConnectDatabase()
 	r := routes.SetupRoutes(db)
-	log.Fatal(r.Run())
+	log.Fatal(r.Run("192.168.0.101:9090"))
 }

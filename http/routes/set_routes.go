@@ -9,7 +9,7 @@ import (
 func SetupRoutes(db *gorm.DB) *gin.Engine {
 	routes := gin.Default()
 
-	routes.POST("/employee/create/bulk", controller.Create(db))
+	routes.POST("/employee/create/bulk", controller.CreateBulk(db))
 
 	return routes
 }
