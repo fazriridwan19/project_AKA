@@ -3,10 +3,10 @@ package routes
 import (
 	"github.com/fazriridwan19/service-employee/http/controller"
 	"github.com/gin-gonic/gin"
-	"gorm.io/gorm"
+	"github.com/jmoiron/sqlx"
 )
 
-func SetupRoutes(db *gorm.DB) *gin.Engine {
+func SetupRoutes(db *sqlx.DB) *gin.Engine {
 	routes := gin.Default()
 
 	routes.POST("/employee/create/bulk", controller.CreateBulk(db))
